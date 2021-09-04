@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import Layout from '../../components/layout'
 
 import Card from "../../components/card"
@@ -7,12 +7,18 @@ import MaxWidthContainer from '../../components/MaxWidthContainer'
 
 import { Grid,Box, ResponsiveContext, Heading } from "grommet"
 
+import SEO from '../../components/seo'
+
 const isMobile = (size) => size === "xsmall" || size === "small"
 
 const BlogPage = ({ data }) => {
   const size = React.useContext(ResponsiveContext)
   return (
     <Layout pageTitle="My Blog Posts">
+      <SEO 
+        title="Martin Bedrift Co" 
+        description="Veldig viktig beskrivelse av hva vi gjør"
+      />
       <MaxWidthContainer>
         <Heading level="2">Eldre inlegg</Heading>
         <ResponsiveContext.Consumer> 

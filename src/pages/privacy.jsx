@@ -5,23 +5,26 @@ import Layout from "../components/layout";
 import { graphql } from "gatsby"
 import MaxWidthContainer from "../components/MaxWidthContainer";
 import { MDXRenderer } from 'gatsby-plugin-mdx' // highlight-line
-
+import SEO from "../components/seo";
 
 function Privacy({data}) {
     return(
-        <Layout>
-            <Hero 
-                title="Personvern" 
-                image={data.hero}
-                height="small" 
-            />
-
-            <MaxWidthContainer>
-              <MDXRenderer>
-                {data.mdx.body}
-              </MDXRenderer>
-            </MaxWidthContainer>
-        </Layout>
+      <Layout>
+        <Hero 
+          title="Personvern" 
+          image={data.hero}
+          height="small" 
+        />
+        <SEO 
+          title="Martin Bedrift Co" 
+          description="Veldig viktig beskrivelse av hva vi gjør"
+        />
+        <MaxWidthContainer>
+          <MDXRenderer>
+            {data.mdx.body}
+          </MDXRenderer>
+        </MaxWidthContainer>
+      </Layout>
         
     )
 }

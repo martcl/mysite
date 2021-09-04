@@ -2,7 +2,6 @@
 import React from "react"
 import { Box, Text, Button, ResponsiveContext, Layer, Heading } from "grommet"
 
-
 import { Close as CloseIcon, Menu as MenuOpenIcon } from "grommet-icons"
 
 import { Link } from 'gatsby'

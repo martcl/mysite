@@ -5,10 +5,6 @@ import Panel from "../components/panel"
 
 import Layout from "../components/layout";
 
-import Autum from "../images/autum.jpg"
-
-import HeroBackground from "../components/HeroBackground";
-
 import { graphql } from "gatsby"
 
 function About({ data }) {
@@ -20,7 +16,7 @@ function About({ data }) {
             height="medium" 
         />
         <SEO 
-            title="Om oss"
+            title="about"
             description="Dette er en beskrivese"
         />
          <Panel

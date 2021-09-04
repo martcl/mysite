@@ -7,7 +7,7 @@ import ContactForm from "../components/contactFrom"
 
 import Layout from "../components/layout";
 
-import Drone from "../images/droneOne.jpg"
+import SEO from "../components/seo";
 
 import { graphql } from "gatsby"
 
@@ -15,9 +15,13 @@ function Contact({data}) {
     return(
         <Layout>
             <Hero 
-                title="Kontakt oss!" 
-                image={data.hero}
-                height="medium" 
+              title="Kontakt oss!" 
+              image={data.hero}
+              height="medium" 
+            />
+            <SEO 
+              title="Om oss"
+              description="Dette er en beskrivese"
             />
             <Panel
                 color="white"

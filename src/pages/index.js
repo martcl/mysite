@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React from 'react'
 import Layout from '../components/layout'
 
 import "./styles.css"
@@ -6,28 +6,30 @@ import "./styles.css"
 import Panel from "../components/panel";
 import SEO from "../components/seo"
 
-
 import Projects from "../components/projects";
 import ContactFrom from "../components/contactFrom";
 import HomeHero from "../components/homeHero"
 
-
 import { graphql } from "gatsby"
-
 
 const IndexPage = ({ data }) => {
   return (
     <Layout pageTitle="Home Page">
-            <SEO title="Martin Bedrift Co" description="Veldig viktig beskrivelse av hva vi gjør" />
+
+      <SEO 
+        title="Martin Bedrift Co" 
+        description="Veldig viktig beskrivelse av hva vi gjør"
+      />
                 
-                <HomeHero image={data.hero} /> 
-                <Panel
-                    image={data.panelOne}
-                    title="Dette er en tittel!"
-                    text="Pellentesque fermentum rutrum est at iaculis. Morbi viverra diam vel dui auctor, et tempor arcu ornare. Fusce nec ipsum interdum ante placerat finibus. Aenean vitae facilisis nunc. Etiam molestie massa vel augue bibendum maximus. Curabitur dictum ante magna, id auctor quam varius sit amet. Praesent lacinia in lacus nec sollicitudin. Proin suscipit odio pretium, scelerisque sapien a, posuere quam."
-                />
-                <Projects posts={data.allMdx.nodes}/>
-                <ContactFrom />
+      <HomeHero image={data.hero} /> 
+      <Panel
+        image={data.panelOne}
+        title="Dette er en tittel!"
+        text="Pellentesque fermentum rutrum est at iaculis. Morbi viverra diam vel dui auctor, et tempor arcu ornare. Fusce nec ipsum interdum ante placerat finibus. Aenean vitae facilisis nunc. Etiam molestie massa vel augue bibendum maximus. Curabitur dictum ante magna, id auctor quam varius sit amet. Praesent lacinia in lacus nec sollicitudin. Proin suscipit odio pretium, scelerisque sapien a, posuere quam."
+      />
+      <Projects posts={data.allMdx.nodes}/>
+      <ContactFrom />
+
     </Layout>
   )
 }
