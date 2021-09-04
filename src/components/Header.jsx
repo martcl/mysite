@@ -1,5 +1,5 @@
 
-import React, { useState } from "react"
+import React from "react"
 import { Box, Text, Button, ResponsiveContext, Layer, Heading } from "grommet"
 
 
@@ -9,7 +9,7 @@ import { Link } from 'gatsby'
 
 import MaxWidthContainer from "./MaxWidthContainer"
 import HideOnPrintBox from "./HideOnPrintBox"
-import { useLocation } from 'react-router-dom'
+
 
 const isMobile = (size) => size === "xsmall" || size === "small"
 
