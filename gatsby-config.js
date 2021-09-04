@@ -8,6 +8,7 @@ module.exports = {
     "gatsby-plugin-image",
     "gatsby-plugin-styled-components",
     "gatsby-plugin-sharp",
+    "gatsby-plugin-robots-txt",
     {
       resolve: `gatsby-source-filesystem`,
       options: {
