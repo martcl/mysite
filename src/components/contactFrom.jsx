@@ -29,13 +29,13 @@ function ContactFrom(){
                 </Box>
                 <Box width="medium" alignSelf="center">
                 <Form onSubmit={(value) => {sendMessage(value)}}>
-                    <FormField name="name" htmlFor="textinput-id" label="Navn" help="Fult navn og/eller bedriftsnavn" required={true}>
+                    <FormField name="name" htmlFor="textinput-id-name" label="Navn" help="Fult navn og/eller bedriftsnavn" required={true}>
                         <TextInput id="textinput-id-name" name="name" />
                     </FormField>
-                    <FormField name="adress" htmlFor="textinput-id" label="Epostadresse" required={true}>
-                        <TextInput id="textinput-id-adress" name="adress" />
+                    <FormField name="adress" htmlFor="textinput-id-adress" label="Epostadresse" required={true}>
+                            <TextInput id="textinput-id-adress" name="adress" />
                     </FormField>
-                    <FormField name="message" htmlFor="textinput-id" label="Melding" required={true}>
+                    <FormField name="message" htmlFor="textinput-id-melding" label="Melding" required={true}>
                         <TextArea
                             name="message"
                             size="medium"
