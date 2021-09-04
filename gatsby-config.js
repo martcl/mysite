@@ -63,6 +63,17 @@ module.exports = {
       },
     },
     `gatsby-plugin-remove-serviceworker`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        // The property ID; the tracking code won't be generated without it
+        trackingId: "G-Z25051RV3S",
+        // Setting this parameter is optional
+        anonymize: true,
+        // defaults to false
+        enableWebVitalsTracking: true,
+      },
+    },
   ],
   
 };
