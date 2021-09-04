@@ -7,6 +7,10 @@ var plugins = [{
       plugin: require('/Users/martinclementz/Desktop/Apps/my-gatsby-site/node_modules/gatsby-plugin-image/gatsby-ssr'),
       options: {"plugins":[]},
     },{
+      name: 'gatsby-plugin-styled-components',
+      plugin: require('/Users/martinclementz/Desktop/Apps/my-gatsby-site/node_modules/gatsby-plugin-styled-components/gatsby-ssr'),
+      options: {"plugins":[],"displayName":true,"fileName":true,"minify":true,"namespace":"","transpileTemplateLiterals":true,"topLevelImportPaths":[],"pure":false},
+    },{
       name: 'gatsby-plugin-mdx',
       plugin: require('/Users/martinclementz/Desktop/Apps/my-gatsby-site/node_modules/gatsby-plugin-mdx/gatsby-ssr'),
       options: {"plugins":[],"gatsbyRemarkPlugins":[{"resolve":"gatsby-remark-images","options":{"maxWidth":1200}}],"extensions":[".mdx"],"defaultLayouts":{},"lessBabel":false,"remarkPlugins":[],"rehypePlugins":[],"mediaTypes":["text/markdown","text/x-markdown"],"root":"/Users/martinclementz/Desktop/Apps/my-gatsby-site"},

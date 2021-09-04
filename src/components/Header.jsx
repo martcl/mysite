@@ -9,7 +9,7 @@ import { Link } from 'gatsby'
 import MaxWidthContainer from "./MaxWidthContainer"
 import HideOnPrintBox from "./HideOnPrintBox"
 
-
+import { LayoutSEO } from "./seo"
 const isMobile = (size) => size === "xsmall" || size === "small"
 
 
@@ -79,6 +79,7 @@ function McHeader ({ siteTitle }){
   const size = React.useContext(ResponsiveContext)
   return(
     <>
+    <LayoutSEO siteTitle={siteTitle} />
     <Box background="rgb(5,25,42)" pad={{ vertical: "small" }}>
       <MaxWidthContainer>
             <Box direction="row" gap="small">

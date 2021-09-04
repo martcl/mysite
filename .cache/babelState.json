@@ -13,6 +13,21 @@
           }
         },
         {
+          "name": "babel-plugin-styled-components",
+          "stage": "develop",
+          "options": {
+            "plugins": [],
+            "displayName": true,
+            "fileName": true,
+            "minify": true,
+            "namespace": "",
+            "transpileTemplateLiterals": true,
+            "topLevelImportPaths": [],
+            "pure": false,
+            "ssr": false
+          }
+        },
+        {
           "name": "/Users/martinclementz/Desktop/Apps/my-gatsby-site/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
           "options": {}
         },
@@ -72,6 +87,21 @@
         {
           "name": "/Users/martinclementz/Desktop/Apps/my-gatsby-site/node_modules/@babel/plugin-proposal-numeric-separator/lib/index.js",
           "options": {}
+        },
+        {
+          "name": "babel-plugin-styled-components",
+          "stage": "develop-html",
+          "options": {
+            "plugins": [],
+            "displayName": true,
+            "fileName": true,
+            "minify": true,
+            "namespace": "",
+            "transpileTemplateLiterals": true,
+            "topLevelImportPaths": [],
+            "pure": false,
+            "ssr": false
+          }
         }
       ],
       "presets": [
@@ -117,6 +147,21 @@
         {
           "name": "/Users/martinclementz/Desktop/Apps/my-gatsby-site/node_modules/@babel/plugin-proposal-numeric-separator/lib/index.js",
           "options": {}
+        },
+        {
+          "name": "babel-plugin-styled-components",
+          "stage": "build-html",
+          "options": {
+            "plugins": [],
+            "displayName": true,
+            "fileName": true,
+            "minify": true,
+            "namespace": "",
+            "transpileTemplateLiterals": true,
+            "topLevelImportPaths": [],
+            "pure": false,
+            "ssr": true
+          }
         }
       ],
       "presets": [
@@ -162,6 +207,21 @@
         {
           "name": "/Users/martinclementz/Desktop/Apps/my-gatsby-site/node_modules/@babel/plugin-proposal-numeric-separator/lib/index.js",
           "options": {}
+        },
+        {
+          "name": "babel-plugin-styled-components",
+          "stage": "build-javascript",
+          "options": {
+            "plugins": [],
+            "displayName": true,
+            "fileName": true,
+            "minify": true,
+            "namespace": "",
+            "transpileTemplateLiterals": true,
+            "topLevelImportPaths": [],
+            "pure": false,
+            "ssr": true
+          }
         }
       ],
       "presets": [

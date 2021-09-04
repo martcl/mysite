@@ -8,7 +8,7 @@ module.exports = {
     "gatsby-plugin-image",
     "gatsby-plugin-styled-components",
     "gatsby-plugin-sharp",
-    "gatsby-plugin-robots-txt",
+    "gatsby-plugin-webpack-bundle-analyser-v2",
     {
       resolve: `gatsby-source-filesystem`,
       options: {

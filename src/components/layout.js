@@ -26,7 +26,7 @@ const Layout = ({ pageTitle, children }) => {
     }
   `)
   return (
-    <Grommet theme={CustomTheme} lang="no">
+    <Grommet theme={CustomTheme}>
       <McHeader siteTitle={data.site.siteMetadata.title} />
         
       {children}

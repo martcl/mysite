@@ -30,10 +30,10 @@ function ContactFrom(){
                 <Box width="medium" alignSelf="center">
                 <Form onSubmit={(value) => {sendMessage(value)}}>
                     <FormField name="name" htmlFor="textinput-id" label="Navn" help="Fult navn og/eller bedriftsnavn" required={true}>
-                        <TextInput id="textinput-id-name" name="name" />
+                        <TextInput id="textinput-id-name" name="name" label="name" />
                     </FormField>
                     <FormField name="adress" htmlFor="textinput-id" label="Epostadresse" required={true}>
-                        <TextInput id="textinput-id-adress" name="adress" />
+                        <TextInput id="textinput-id-adress" name="adress" label="adress"  />
                     </FormField>
                     <FormField name="message" htmlFor="textinput-id" label="Melding" required={true}>
                         <TextArea
