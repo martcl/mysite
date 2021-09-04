@@ -1,8 +1,6 @@
 import React from "react"
 
-import { Text } from "grommet"
-
-import {Box} from "grommet"
+import { Text, Box } from "grommet"
 
 import MaxWidthContainer from "./MaxWidthContainer"
 

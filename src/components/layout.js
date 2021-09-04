@@ -6,7 +6,7 @@ import CustomTheme from "./customTheme"
 import { Grommet } from 'grommet';
 
 import Footer from "../components/Footer"
-
+import "./styles.css"
 /*
 
 Til videre.. 
@@ -26,7 +26,7 @@ const Layout = ({ pageTitle, children }) => {
     }
   `)
   return (
-    <Grommet theme={CustomTheme}>
+    <Grommet theme={CustomTheme} lang="no">
       <McHeader siteTitle={data.site.siteMetadata.title} />
         
       {children}

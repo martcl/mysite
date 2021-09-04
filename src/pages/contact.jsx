@@ -41,7 +41,7 @@ export const query = graphql`
   query {
     hero: file(relativePath: { eq: "peopleTwo.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 700, quality: 70) {
+          fluid(maxWidth: 1080, quality: 70) {
             ...GatsbyImageSharpFluid
             
           }
@@ -49,7 +49,7 @@ export const query = graphql`
     }
     panelOne: file(relativePath: { eq: "droneThree.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 1000, quality: 100) {
+          fluid(maxWidth: 500, quality: 70) {
             ...GatsbyImageSharpFluid
             
           }

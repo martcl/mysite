@@ -1,5 +1,5 @@
 import React from "react"
-import { Box, Heading, Image, Paragraph } from "grommet"
+import { Box, Heading, Paragraph } from "grommet"
 import MaxWidthContainer from "../components/MaxWidthContainer"
 
 import PreviewCompatibleImage from "./PreviewCompatibleImage"

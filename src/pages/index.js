@@ -1,8 +1,6 @@
 import React from 'react'
 import Layout from '../components/layout'
 
-import "./styles.css"
-
 import Panel from "../components/panel";
 import SEO from "../components/seo"
 
@@ -39,7 +37,7 @@ export const query = graphql`
   query {
     hero: file(relativePath: { eq: "droneTwo.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 1080, quality: 100) {
+        fluid(maxWidth: 1080, quality: 70) {
           ...GatsbyImageSharpFluid
           
         }
@@ -62,7 +60,7 @@ export const query = graphql`
        
           featuredimage {
           childImageSharp {
-            fluid(quality: 90, maxWidth: 500) {
+            fluid(quality: 70, maxWidth: 400) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }

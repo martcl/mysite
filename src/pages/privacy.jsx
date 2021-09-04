@@ -33,7 +33,7 @@ export const query = graphql`
   query {
     hero: file(relativePath: { eq: "droneTwo.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 1000, quality: 100) {
+        fluid(maxWidth: 1080, quality: 70) {
           ...GatsbyImageSharpFluid
           
         }
@@ -46,7 +46,7 @@ export const query = graphql`
         description
         featuredimage {
           childImageSharp {
-            fluid(quality: 90, maxWidth: 1920) {
+            fluid(quality: 70, maxWidth: 400) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
@@ -56,8 +56,6 @@ export const query = graphql`
     }
   }
 `
-
-
 
 export default Privacy
 
