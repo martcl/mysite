@@ -17,7 +17,11 @@ var plugins = [{
     },{
       name: 'gatsby-plugin-manifest',
       plugin: require('/Users/martinclementz/Desktop/Apps/my-gatsby-site/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
-      options: {"plugins":[],"name":"GatsbyJS","short_name":"GatsbyJS","start_url":"/","background_color":"#6b37bf","theme_color":"#6b37bf","display":"standalone","icon":"src/images/icons/icon.png","crossOrigin":"use-credentials","legacy":true,"theme_color_in_head":true,"cache_busting_mode":"query","include_favicon":true,"cacheDigest":"8e8401a51cc31de3094289d081c899b3"},
+      options: {"plugins":[],"name":"GatsbyJS","short_name":"GatsbyJS","start_url":"/","background_color":"#6b37bf","theme_color":"#6b37bf","display":"standalone","icon":"src/images/icons/icon.png","crossOrigin":"use-credentials","cache_busting_mode":"none","legacy":true,"theme_color_in_head":true,"include_favicon":true,"cacheDigest":null},
+    },{
+      name: 'gatsby-plugin-offline',
+      plugin: require('/Users/martinclementz/Desktop/Apps/my-gatsby-site/node_modules/gatsby-plugin-offline/gatsby-ssr'),
+      options: {"plugins":[],"workboxConfig":{"globPatterns":["src/images/icons/icon.png"]}},
     }]
 /* global plugins */
 // During bootstrap, we write requires at top of this file which looks like:
