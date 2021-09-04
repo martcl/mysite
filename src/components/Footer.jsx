@@ -25,7 +25,7 @@ function Footer () {
         <Text size="small">
           <Link to="/privacy">Personvern (cookies)</Link>
         </Text>
-        <Paragraph color="dark-3" size="small">
+        <Paragraph color="dark-2" size="small">
           © {new Date().getFullYear()}
           {" Martin Company Co"}
         </Paragraph>

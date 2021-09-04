@@ -46,8 +46,8 @@ function Projects({posts}) {
             <MaxWidthContainer >
                 <Link to="/blog" style={{alignSelf:"center"}}>
                     <Box direction="row" gap="small">
-                        <Archive color="grey" />
-                        <Text color="grey"> Eldre innlegg </Text>
+                        <Archive color="dark-2" />
+                        <Text color="dark-2"> Eldre innlegg </Text>
                     </Box>  
                     
                 </Link>
