@@ -12,13 +12,25 @@ import {
 
 import MaxWidthContainer from "./MaxWidthContainer";
 
+import { send } from 'emailjs-com';
 
 
 function ContactFrom(){
     const [numerSendt, setNumberSendt] = useState(0)
 
-    const sendMessage = ()=>{
-        console.log("sendt")
+    const sendMessage = (value) => {
+        send(
+            process.env.SERVICE_ID,
+            process.env.TEMPLATE_ID,
+            value,
+            process.env.USER_ID
+          )
+            .then((response) => {
+              console.log('SUCCESS!', response.status, response.text);
+            })
+            .catch((err) => {
+              console.log('FAILED...', err);
+            });
     }
     return(
         <MaxWidthContainer>
