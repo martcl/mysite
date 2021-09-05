@@ -31,17 +31,16 @@ function Projects({posts}) {
     return(
         <Box background="light-2" pad={{vertical:"medium"}} >
             <Container>
-                <Child>
-                    {isMobile(size)? "": <div style={{width:"200px"}} />}
-                    
-                    </Child>
-                        {posts && posts.map(post => {
-                            return(
-                                <Child key={post.id}>
-                                    <Card post={post}/> 
-                                </Child>
-                            )
-                        })}   
+                
+                    {isMobile(size)? "":<Child> <div style={{width:"250px"}} /></Child>}
+                
+                {posts && posts.map(post => {
+                    return(
+                        <Child key={post.id}>
+                            <Card post={post}/> 
+                        </Child>
+                    )
+                })}   
             </Container>
             <MaxWidthContainer >
                 <Link to="/blog" style={{alignSelf:"center"}}>

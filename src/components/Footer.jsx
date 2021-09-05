@@ -27,7 +27,7 @@ function Footer () {
         </Text>
         <Paragraph color="dark-2" size="small">
           © {new Date().getFullYear()}
-          {" Martin Company Co"}
+          {" litenutvikler.no"}
         </Paragraph>
       </Box>
     </MaxWidthContainer>

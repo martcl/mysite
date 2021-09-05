@@ -45,7 +45,7 @@ function ContactFrom(){
                         />  
                     </FormField>
                     <Box direction="row" gap="medium">
-                        <Button type="submit" primary label="Submit" color="accent-4"/>
+                        <Button type="submit" primary label="Submit" color="accent-4" />
                         <Button type="reset" label="Reset" color="accent-4" />
                     </Box>
                 </Form>

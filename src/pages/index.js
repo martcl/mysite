@@ -4,18 +4,20 @@ import Layout from '../components/layout'
 import Panel from "../components/panel";
 import SEO from "../components/seo"
 
+import MaxWidthContainer from '../components/MaxWidthContainer';
+import { Button } from 'grommet';
 import Projects from "../components/projects";
 import ContactFrom from "../components/contactFrom";
 import HomeHero from "../components/homeHero"
-
-import { graphql } from "gatsby"
+import Technologies from '../components/technologies';
+import { graphql, Link } from "gatsby"
 
 const IndexPage = ({ data }) => {
   return (
     <Layout pageTitle="Home Page">
 
       <SEO 
-        title="Martin Bedrift Co" 
+        title="Forside" 
         description="Veldig viktig beskrivelse av hva vi gjør"
       />
                 
@@ -25,6 +27,13 @@ const IndexPage = ({ data }) => {
         title="Dette er en tittel!"
         text="Pellentesque fermentum rutrum est at iaculis. Morbi viverra diam vel dui auctor, et tempor arcu ornare. Fusce nec ipsum interdum ante placerat finibus. Aenean vitae facilisis nunc. Etiam molestie massa vel augue bibendum maximus. Curabitur dictum ante magna, id auctor quam varius sit amet. Praesent lacinia in lacus nec sollicitudin. Proin suscipit odio pretium, scelerisque sapien a, posuere quam."
       />
+
+      <MaxWidthContainer pad={{bottom:"large"}} align="center" justify="center" direction="row" gap="medium" wrap="true">
+        <Link to="/about"><Button label="Om Oss"/></Link>
+        <Link to="/company"><Button label="For Bedrifter" primary /></Link>
+      </MaxWidthContainer>
+
+      <Technologies />
       <Projects posts={data.allMdx.nodes}/>
       <ContactFrom />
 

@@ -17,7 +17,7 @@ var plugins = [{
     },{
       name: 'gatsby-plugin-manifest',
       plugin: require('/Users/martinclementz/Desktop/Apps/my-gatsby-site/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
-      options: {"plugins":[],"name":"GatsbyJS","short_name":"GatsbyJS","start_url":"/","background_color":"#6b37bf","theme_color":"#6b37bf","display":"standalone","icon":"src/images/icons/icon.png","crossOrigin":"use-credentials","cache_busting_mode":"none","legacy":true,"theme_color_in_head":true,"include_favicon":true,"cacheDigest":null},
+      options: {"plugins":[],"name":"GatsbyJS","short_name":"GatsbyJS","start_url":"/","background_color":"#6b37bf","theme_color":"#6b37bf","display":"standalone","icon":"src/images/icons/myLogo.png","crossOrigin":"use-credentials","cache_busting_mode":"none","legacy":true,"theme_color_in_head":true,"include_favicon":true,"cacheDigest":null},
     },{
       name: 'gatsby-plugin-google-gtag',
       plugin: require('/Users/martinclementz/Desktop/Apps/my-gatsby-site/node_modules/gatsby-plugin-google-gtag/gatsby-ssr'),

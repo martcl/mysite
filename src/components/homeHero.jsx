@@ -1,6 +1,7 @@
 import React, { useRef }from "react";
 import { Box, Heading, Text } from "grommet"
 
+import { CaretDown as Down } from "grommet-icons"
 
 import MaxWidthContainer from "./MaxWidthContainer";
 import HeroBackground from "./HeroBackground";
@@ -39,7 +40,7 @@ function HomeHero ({ image }) {
             hoverIndicator={true}
             animation="pulse"
             >
-              <div>Ned</div>
+              <Down />
           </Box>
           <div ref={myRef}></div>
         </Box>

@@ -2,10 +2,11 @@
 import React from "react"
 import { Box, Text, Button, ResponsiveContext, Layer, Heading } from "grommet"
 
-import { Close as CloseIcon, Menu as MenuOpenIcon } from "grommet-icons"
+import { Close, Menu as MenuOpenIcon } from "grommet-icons"
 
-import { Link } from 'gatsby'
+import  { Link, graphql, useStaticQuery } from 'gatsby'
 
+import Img from "gatsby-image"
 import MaxWidthContainer from "./MaxWidthContainer"
 import HideOnPrintBox from "./HideOnPrintBox"
 
@@ -16,7 +17,6 @@ const isMobile = (size) => size === "xsmall" || size === "small"
 function ResponsiveMenu ({ isMobile, items }) {
   const [show, setShow] = React.useState();
 
-  
   if (isMobile)
     return (
       <Box>
@@ -35,7 +35,7 @@ function ResponsiveMenu ({ isMobile, items }) {
                 margin={{bottom:"medium", right:"xsmall", top:"xsmall"}} 
                 color="brand"
                 alignSelf="end"
-                icon={<CloseIcon color="action"/>}
+                icon={<Close color="brand"/>}
                 onClick={() => setShow(false)}
               />
               <Box pad={{horizontal:"xlarge"}}>
@@ -75,28 +75,42 @@ function ResponsiveMenu ({ isMobile, items }) {
 }
 
 
-function McHeader ({ siteTitle }){
+function McHeader ({ siteTitle}){
   const size = React.useContext(ResponsiveContext)
+  const data = useStaticQuery(graphql`
+  query {
+    file(relativePath: {eq:"icons/myLogo.png"}) {
+      childImageSharp {
+        fluid(maxWidth: 100, quality: 10) {
+          ...GatsbyImageSharpFluid
+          
+         }
+        }
+      }
+    }
+  `)
   return(
     <>
     <LayoutSEO siteTitle={siteTitle} />
     <Box background="rgb(5,25,42)" pad={{ vertical: "small" }}>
       <MaxWidthContainer>
             <Box direction="row" gap="small">
-              <Box>
-                <Text size="large" style={{ whiteSpace: "nowrap" }}>
-                  <Link
+            <Link
                     to="/"
                     style={{
                       color: "white",
                       textDecoration: "none",
                     }}
                   >
+                <Box direction="row" gap="small">
+                    <Box width="xxsmall">
+                      <Img fluid={data.file.childImageSharp.fluid}/>
+                    </Box>
+                    <Box justify="center">
                     <Heading level="2" margin="0">{siteTitle}</Heading>
-            
-                  </Link>
-                </Text>
-              </Box>
+                    </Box>
+                </Box>
+              </Link>
               <HideOnPrintBox
                 direction="row"
                 alignSelf="center"
@@ -106,10 +120,6 @@ function McHeader ({ siteTitle }){
                   isMobile={isMobile(size)}
                   items={[
                     {
-                      label: "Hjem",
-                      to:"/",
-                    },
-                    {
                       label: "Om oss",
                       to:"/about",
                     },
@@ -117,8 +127,10 @@ function McHeader ({ siteTitle }){
                       label: "Kontaktinfo",
                       to: "/contact",
                     },
-                    
-
+                    {
+                      label: "For selskaper",
+                      to: "/company",
+                    },
                   ]}
                 />
               </HideOnPrintBox>
@@ -131,6 +143,8 @@ function McHeader ({ siteTitle }){
   )
   
 }
+
+
 
 
 export default McHeader

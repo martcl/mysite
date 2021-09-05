@@ -5,6 +5,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx' // highlight-line
 import Hero from '../../components/Hero'
 import MaxWidthContainer from '../../components/MaxWidthContainer'
 import SEO from '../../components/seo'
+import { Heading, Paragraph, Text } from 'grommet'
 const BlogPost = ({data}) => {
   return (
     <Layout pageTitle={data.mdx.frontmatter.title}>
@@ -17,6 +18,15 @@ const BlogPost = ({data}) => {
         description={data.mdx.frontmatter.description}
       />
       <MaxWidthContainer>
+        <Heading>
+          {data.mdx.frontmatter.title}
+        </Heading>
+        <Text color="dark-3">
+          {data.mdx.frontmatter.date}
+        </Text>
+        <Paragraph>
+          <b>{data.mdx.frontmatter.description}</b>
+        </Paragraph>
         <MDXRenderer>
           {data.mdx.body}
         </MDXRenderer>

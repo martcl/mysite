@@ -4,8 +4,10 @@ import { deepMerge } from "grommet/utils"
 const myTheme = {
   global: {
     colors: {
-      brand: "#DD5F3C",
-      secoundary: "#393d60",
+      brand: "#FF6B6B",
+      secound: "#FFE66D",
+      third: "#4ECDC4",
+      fourth: "#1A535C"
       
     },
     font: {
