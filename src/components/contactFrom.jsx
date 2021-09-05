@@ -7,33 +7,68 @@ import {
     TextInput,
     Button,
     TextArea, 
-    Paragraph
+    Paragraph,
 } from "grommet"
 
 import MaxWidthContainer from "./MaxWidthContainer";
-
-import { send } from 'emailjs-com';
+import AlertMessage from "./alertMessage";
 
 
 function ContactFrom(){
-    const [numerSendt, setNumberSendt] = useState(0)
+    const [count, setCount] = useState(0);
 
-    const sendMessage = (value) => {
-        send(
-            process.env.GATSBY_SERVICE_ID,
-            process.env.GATSBY_TEMPLATE_ID,
-            value,
-            process.env.GATSBY_USER_ID
-          )
-            .then((response) => {
-              console.log('SUCCESS!', response.status, response.text);
+    const [visibleOk, setVisibleOk] = useState(false);
+    const [visibleBad, setVisibleBad] = useState(false);
+
+    const sendMessage = ({ value }) => {
+        console.log(value)
+        if (count < 7){
+            const formData = new FormData();
+            formData.append(
+                'name',
+                value.name
+            )
+            formData.append(
+                'email',
+                value.adress
+            )
+            formData.append(
+                'message',
+                value.message
+            )
+            fetch("https://getform.io/f/f53aab5d-6b3e-4e7a-a41c-2d04d5538136", {
+                    method: "POST",
+                    body: formData,
             })
-            .catch((err) => {
-              console.log('FAILED...', err);
-            });
+            .catch(error => {
+                console.log(error)
+                setVisibleBad(true)
+            })
+            .then(setVisibleOk(true))
+            .then(setCount(count+1))
+            
+        } else if (count > 7){
+            setVisibleOk(true)
+        }
     }
+
     return(
         <MaxWidthContainer>
+            {visibleOk && (
+                <AlertMessage 
+                    onClose={() => setVisibleOk(false)} 
+                    message="Vi har motatt meldingen din!"
+                    color="status-ok"
+                />
+            )}
+            {visibleBad && (
+                <AlertMessage 
+                    onClose={() => setVisibleBad(false)} 
+                    message="Ops! Her skjedde det noe galt"
+                    color="status-error"
+                />
+            )}
+
             <Box direction="row-responsive" fill="horizontal" gap="large" margin={{vertical:"large"}}>
                 <Box alignSelf="center" pad="medium">
                     <Heading level="2" margin={{vertical:"small"}}>Kontakt oss</Heading>

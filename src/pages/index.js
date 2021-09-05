@@ -28,7 +28,7 @@ const IndexPage = ({ data }) => {
         text="Pellentesque fermentum rutrum est at iaculis. Morbi viverra diam vel dui auctor, et tempor arcu ornare. Fusce nec ipsum interdum ante placerat finibus. Aenean vitae facilisis nunc. Etiam molestie massa vel augue bibendum maximus. Curabitur dictum ante magna, id auctor quam varius sit amet. Praesent lacinia in lacus nec sollicitudin. Proin suscipit odio pretium, scelerisque sapien a, posuere quam."
       />
 
-      <MaxWidthContainer pad={{bottom:"large"}} align="center" justify="center" direction="row" gap="medium" wrap="true">
+      <MaxWidthContainer pad={{bottom:"large"}} align="center" justify="center" direction="row" gap="medium" wrap={true}>
         <Link to="/about"><Button label="Om Oss"/></Link>
         <Link to="/company"><Button label="For Bedrifter" primary /></Link>
       </MaxWidthContainer>

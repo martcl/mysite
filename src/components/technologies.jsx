@@ -35,7 +35,7 @@ function Technologies(){
   `)
     return(
         <Box background="light-1" pad="small">
-            <MaxWidthContainer direction="row" wrap="true" gap="small" align="center" justify="center" > 
+            <MaxWidthContainer direction="row" gap="small" align="center" justify="center" wrap={true}>
                 <Box width="small">
                     <Img fluid={data.gatsby.childImageSharp.fluid}  />
                 </Box>
@@ -43,10 +43,11 @@ function Technologies(){
                     <Img fluid={data.python.childImageSharp.fluid} />
                 </Box>
                 <Box width="xsmall">   
-                    <PreviewCompatibleImage imageInfo={data.react} />
+                    <Img fluid={data.react.childImageSharp.fluid} />
                 </Box>  
             
                 <img src={data.grommet.publicURL} alt="React Logo" style={{width:"200px"}} />
+     
             </MaxWidthContainer>
         </Box>
     )
