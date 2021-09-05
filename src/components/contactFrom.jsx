@@ -20,10 +20,10 @@ function ContactFrom(){
 
     const sendMessage = (value) => {
         send(
-            process.env.SERVICE_ID,
-            process.env.TEMPLATE_ID,
+            process.env.GATSBY_SERVICE_ID,
+            process.env.GATSBY_TEMPLATE_ID,
             value,
-            process.env.USER_ID
+            process.env.GATSBY_USER_ID
           )
             .then((response) => {
               console.log('SUCCESS!', response.status, response.text);
