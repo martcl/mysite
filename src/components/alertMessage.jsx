@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Layer, Box, Text, Button, Anchor } from "grommet";
+import { Layer, Box, Text, Button } from "grommet";
 import { FormClose } from "grommet-icons";
 
 
@@ -31,7 +31,7 @@ class Toast extends React.Component {
       <Layer
         position={position || 'top'}
         full={full}
-        modal={modal}
+        modal={false}
         margin="none"
         responsive
         plain={modal ? false : true}
@@ -44,14 +44,13 @@ class Toast extends React.Component {
 }
 
 
-function AlertMessage ({ message, color, onClose }) {
+function AlertMessage ({ message, color, onClose, pos }) {
   return(
     <Toast
       margin="small"
-      position="top"
+      position={pos}
       responsive={false}
       onClose={onClose}
-      onEsc={onClose}
       duration={6}
     >
       <Box

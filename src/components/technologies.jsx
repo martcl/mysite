@@ -2,7 +2,7 @@ import React from "react";
 import { Box } from "grommet"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
-import PreviewCompatibleImage from "./PreviewCompatibleImage";
+
 import MaxWidthContainer from "./MaxWidthContainer";
 function Technologies(){
     const data = useStaticQuery(graphql`
@@ -45,8 +45,7 @@ function Technologies(){
                 <Box width="xsmall">   
                     <Img fluid={data.react.childImageSharp.fluid} />
                 </Box>  
-            
-                <img src={data.grommet.publicURL} alt="React Logo" style={{width:"200px"}} />
+                <img src={data.grommet.publicURL} alt="React Logo" style={{width:"200px", height:"auto"}} />
      
             </MaxWidthContainer>
         </Box>

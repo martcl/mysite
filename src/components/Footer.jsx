@@ -8,9 +8,9 @@ import { Link } from "gatsby";
 
 
 function Footer () {
-
   return(
     <HideOnPrintBox>
+ 
     <MaxWidthContainer>
       <Box justify="center" align="center" direction="row" gap="medium" wrap>
         { "" !== "/" && (

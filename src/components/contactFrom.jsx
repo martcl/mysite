@@ -59,6 +59,7 @@ function ContactFrom(){
                     onClose={() => setVisibleOk(false)} 
                     message="Vi har motatt meldingen din!"
                     color="status-ok"
+                    pos="top"
                 />
             )}
             {visibleBad && (
@@ -66,6 +67,7 @@ function ContactFrom(){
                     onClose={() => setVisibleBad(false)} 
                     message="Ops! Her skjedde det noe galt"
                     color="status-error"
+                    pos="top"
                 />
             )}
 
