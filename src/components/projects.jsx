@@ -1,5 +1,5 @@
 import React from "react"
-import { Box, Button, Heading,Text, ResponsiveContext } from "grommet"
+import { Box, Text, ResponsiveContext } from "grommet"
 import Card  from "./card"
 
 import MaxWidthContainer from "./MaxWidthContainer"
@@ -7,7 +7,7 @@ import MaxWidthContainer from "./MaxWidthContainer"
 import styled from "styled-components"
 import { Link } from "gatsby"
 
-import { Archive } from "grommet-icons"
+import { Archive, More, CaretRightFill, CaretLeftFill } from "grommet-icons"
 
 const Container = styled.div`
 padding: 1rem;
@@ -30,21 +30,33 @@ function Projects({posts}) {
     const size = React.useContext(ResponsiveContext)
     return(
         <Box background="light-2" pad={{vertical:"medium"}} >
-            <Container>
+
+            {isMobile(size) &&(
+                <Box justify="center" direction="row" alignContent="center">
+                    <CaretLeftFill />
+                        <More />
+                    <CaretRightFill />
+                </Box>
+            )}
+            
+            <Container> 
                 
-                    {isMobile(size)? "":<Child> <div style={{width:"250px"}} /></Child>}
+                {isMobile(size)? "":<Child> <div style={{width:"250px"}} /></Child>}
                 
                 {posts && posts.map(post => {
                     return(
                         <Child key={post.id}>
-                            <Card post={post}/> 
+                            <Card post={post} size={isMobile(size)} /> 
                         </Child>
                     )
-                })}   
+                })}
+
             </Container>
+        
             <MaxWidthContainer >
                 <Link to="/blog" style={{alignSelf:"center"}}>
                     <Box direction="row" gap="small">
+                        
                         <Archive color="dark-2" />
                         <Text color="dark-2"> Eldre innlegg </Text>
                     </Box>  

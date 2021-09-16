@@ -74,7 +74,16 @@ function ContactFrom(){
             <Box direction="row-responsive" fill="horizontal" gap="large" margin={{vertical:"large"}}>
                 <Box alignSelf="center" pad="medium">
                     <Heading level="2" margin={{vertical:"small"}}>Kontakt oss</Heading>
-                    <Paragraph>Integer vitae ante tempus, tempus arcu sit amet, fringilla magna. Nullam nisl elit, hendrerit in nibh et, eleifend pretium purus. Ut pretium eros ligula, ac lacinia felis condimentum vel. Praesent ut urna ornare, lobortis sem ut, iaculis est. Nulla cursus erat eleifend suscipit feugiat. Fusce hendrerit massa sollicitudin sapien sollicitudin, sit amet condimentum nisl luctus. Donec in commodo eros. Cras enim turpis, sagittis nec purus a, ornare iaculis dolor.</Paragraph>
+                    <Paragraph>
+                        Ønsker dere å gjennomføre ett prosjekt? Trenger dere en utvikler? Ta kontakt! 
+                        Spørsmål og henveldenser blir tatt godt imot, og vil bli besvart kjappest via
+                        epost og SMS. 
+                        <br />
+                        <br />
+                        Epost: <a href="mailto:martin@litenutvikler.no"> martin@litenutvikler.no </a>
+                        <br />
+                        Telefon: +47 918 50 048
+                    </Paragraph>
                 </Box>
                 <Box width="medium" alignSelf="center">
                 <Form onSubmit={(value) => {sendMessage(value)}}>
@@ -94,8 +103,8 @@ function ContactFrom(){
                         />  
                     </FormField>
                     <Box direction="row" gap="medium">
-                        <Button type="submit" primary label="Submit" color="accent-4" />
                         <Button type="reset" label="Reset" color="accent-4" />
+                        <Button type="submit" primary label="Send" color="accent-4" />
                     </Box>
                 </Form>
             </Box>

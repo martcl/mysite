@@ -3,7 +3,7 @@ import Layout from '../components/layout'
 
 import Panel from "../components/panel";
 import SEO from "../components/seo"
-
+import {Box} from "grommet"
 import MaxWidthContainer from '../components/MaxWidthContainer';
 import { Button } from 'grommet';
 import Projects from "../components/projects";
@@ -24,13 +24,19 @@ const IndexPage = ({ data }) => {
       <HomeHero image={data.hero} /> 
       <Panel
         image={data.panelOne}
-        title="Dette er en tittel!"
-        text="Pellentesque fermentum rutrum est at iaculis. Morbi viverra diam vel dui auctor, et tempor arcu ornare. Fusce nec ipsum interdum ante placerat finibus. Aenean vitae facilisis nunc. Etiam molestie massa vel augue bibendum maximus. Curabitur dictum ante magna, id auctor quam varius sit amet. Praesent lacinia in lacus nec sollicitudin. Proin suscipit odio pretium, scelerisque sapien a, posuere quam."
+        title="Vi utvikler"
+        text={
+          <span >
+            Litenutvikler.no tilbyr konsulenttjenester til andre bedrifter og selskaper knyttet til utvikling av programmvare
+            og webutvikling. Vi tar på oss nye utfordinger både innenfor ekspertområdene våre Pyton og Reactjs, men også 
+            innenfor andre teknologier. <Link to="/contact"> Ta kontakt </Link> slik at vi kan løse utfordringen sammen!
+          </span>
+        }
       />
 
       <MaxWidthContainer pad={{bottom:"large"}} align="center" justify="center" direction="row" gap="medium" wrap={true}>
         <Link to="/about"><Button label="Om Oss"/></Link>
-        <Link to="/company"><Button label="For Bedrifter" primary /></Link>
+        <Link to="/company"><Button label="For Selskaper" primary /></Link>
       </MaxWidthContainer>
 
       <Technologies />

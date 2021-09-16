@@ -42,8 +42,8 @@ const Layout = ({ pageTitle, children }) => {
       {!value && (
         <AlertMessage 
           onClose={() => onClose()} 
-          message="Denne siden bruker Google Analytics. Les mere på /privacy"
-          color="light-2"
+          message="-- Denne siden er under utvikling! -- \n den er ikke klar"
+          color="status-critical"
           pos="bottom"
         />
       ) 

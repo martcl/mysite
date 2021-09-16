@@ -16,11 +16,14 @@ function HomeHero ({ image }) {
         <HeroBackground image={image} height="85vh">
           <MaxWidthContainer animation="fadeIn" fill="vertical" justify="center">
             <Box align="center" margin={{bottom:"xlarge", top:"0"}}>
-              <Heading color="white">
-              Hei verden!
+              <Heading color="brand" margin="0">
+                Trenger du en utvikler?
             </Heading>
-            <Text margin="medium" color="white">
-            Pellentesque fermentum rutrum est at iaculis. Morbi viverra diam vel dui auctor, et tempor arcu ornare. Fusce nec ipsum interd
+            <Heading color="third" margin="0">
+                Trenger du en utvikler?
+            </Heading>
+            <Text margin="medium" color="white" textAlign="center" weight="bold">
+              Vi gjør jobben for deg!
             </Text>
             </Box>
           

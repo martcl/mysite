@@ -1,19 +1,17 @@
 import React from "react"
-import { Box, Button, Heading, Paragraph, Text } from "grommet"
+import { Box, Button, Heading, Paragraph, Text, Anchor } from "grommet"
 
 import { Link } from "gatsby";
 
 import HeroBackground from "./HeroBackground";
 
-function Card({post}) {
+function Card({ post, size }) {
     return(
 
-        <Box width="medium" elevation="medium" alignSelf="center">
-            <HeroBackground image={post.frontmatter.featuredimage} height="normal">
+        <Box width={size? "350px": "medium"} elevation="medium" alignSelf="center" >
+            <HeroBackground image={post.frontmatter.featuredimage} height="xsmall" >
             </HeroBackground>
-            <Box pad={{horizontal:"medium", vertical:"small"}} background="white">
-                
-                <Box margin={{horizontal:"xsmall"}}>
+            <Box pad={{horizontal:"25px", top:"small", bottom:"medium"}} background="white" fill="vertical" >
                 
                 <Heading level="2" size="small" margin={{bottom:"xsmall"}}>
                     {post.frontmatter.title}
@@ -24,10 +22,9 @@ function Card({post}) {
                 </Paragraph>
                 <Box direction="row" justify="between" margin={{vertical:"small"}}>
                     <Link to={`/blog/${post.slug}`}>
-                        <Button label="les mer" secondary/>
+                        <Anchor label="les mer" color="fourth" />
                     </Link>
                     <Text alignSelf="center">{post.frontmatter.date}</Text>
-                </Box>
                 </Box>
             </Box>
         </Box>
